@@ -1,14 +1,96 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    text-decoration: none;
-    list-style-type: none;
+.caption-center{
+    top: 40%;
 }
-body{
-    height: 100%;
+.rounded-circle{
+    animation-name: rotar_logo;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+.navbar{
+    background-image: linear-gradient(to left, rgb(96, 187, 247), rgb(0, 67, 78)); !important
+}
 
+@keyframes rotar_logo {
+    0%{
+        transform: rotateY(0deg);
+    }
+
+    50%{
+        transform: rotateY(180deg);
+    }
+
+    100%{
+        transform: rotateY(360);
+    }
+    
 }
-.fondonav{
+footer{
+    display: grid;
+    background-color: #39AEA9; 
+    grid-template-areas: "seguinos redes contactate copyright";
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    }
+
+    footer .instagram{
+        grid-area: seguinos;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    footer .iconos{
+        grid-area: redes;
+        display: flex;
+    justify-content: center;
+    }
+
+    .iconos2{
+        display: flex;
+
+    }
+    .sacar-subrayado{
+        text-decoration: none;
+    }
+    footer .wp{
+        grid-area: contactate;
+        display: flex;
+    justify-content: center;
+
+    }
+
+    footer .pie__copy{
+        grid-area: copyright;
+        display: flex;
+    justify-content: center;
+
+    }
+    .instagram {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        animation-name: flash;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    
+    }
+    .instagram p{
+        color: white;
+    }
+     
+    .wp { 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        animation-name: flash;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        }
+    .wp p{
+        color: white;
+    }
+ /*empieza la pagina de sobre nosotros*/
+
+ .fondonav{
     background-image: linear-gradient(to left, rgb(96, 187, 247), rgb(0, 67, 78));
   
     display: grid;
@@ -68,108 +150,7 @@ body{
     display: none;
   }
 
-
-
-.main_index{
-    height: 80vh;
-    background-image: url(../imagenes/piscinas.jpg);
-    background-position: center;
-    background-size: cover;
-    max-width: 100%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(8,1fr);
-
-
-
-}
-.main_index .piscinas{
-    grid-column: 4/6;
-    grid-row: 4/5;
-
-}
-/*agrego animacion*/
-.piscinas{
-    animation-name: backInDown;
-    animation-duration: 3s;
-}
-.main_index .mantenimiento{
-    grid-column: 3/7;
-    grid-row: 5/6;
-
-
-}
-.main_index .piscinas{
-    grid-column: 4/6;
-}
-
-
-    .main_index{
-        font-family: 'Inspiration', cursive;
-font-family: 'League Gothic', sans-serif;
-font-family: 'Raleway', sans-serif;
-    }
-
-    footer{
-    display: grid;
-    background-color: #39AEA9; 
-    grid-template-areas: "seguinos redes contactate copyright";
-    padding-top: 2%;
-    padding-bottom: 2%;
-
-    }
-
-    footer .instagram{
-        grid-area: seguinos;
-        display: flex;
-        justify-content: center;
-
-    }
-
-    footer .iconos{
-        grid-area: redes;
-        display: flex;
-    justify-content: center;
-
-    }
-    .iconos2{
-        display: flex;
-    }
-
-    footer .wp{
-        grid-area: contactate;
-        display: flex;
-    justify-content: center;
-
-    }
-
-    footer .pie__copy{
-        grid-area: copyright;
-        display: flex;
-    justify-content: center;
-
-    }
-    .instagram {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: white;
-        animation-name: flash;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-    
-    }
-     
-    .wp { 
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        color: white;
-        animation-name: flash;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        }
-
-        /*empieza la pagina de sobre nosotros*/
-
-    .FondoGris{
+.FondoGris{
         background-image: url(../imagenes/backgorund.jpg);
     } 
     
@@ -249,7 +230,6 @@ font-family: 'Raleway', sans-serif;
 }
    
 
-/* COMENTARIO/PREGUNTA: yo queria modificar el font family solo de los subtitulos, por eso en el html agregue un class=subtitulos pero no me dejó ponerle propiedades solo a los subtitulos, solo me dejó de esta forma q sigue abajo, pero me afecta a todo el texto del div, De que forma puedo hacer lo que yo queria hacer?*/
 .foto1{
     grid-area: foto1;
     padding: 10%;
@@ -366,91 +346,16 @@ font-family: 'Raleway', sans-serif;
     margin-bottom: 20px;
 }
 
-
-
-
-
-/*empieza la pagina de contacto*/
-
-    .main_contacto{
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(10,1fr);
-        grid-template-rows: 1fr auto;
-
-    }
-    .FondoGris{
-        position: relative;
-        min-height: 40vh;
-    }
-    .TituloContacto{
-        font-family: fantasy;
-        padding: 20px;
-
-    }
-    
-
-
-    .section_contacto {
-    grid-column: 5 / 7;
-
-
-
-
-}
-.div_contacto{
-    grid-column: 5 / 7;
-    grid-row: 2 / 3;
-  }
-
-    form{
-        background-color: white;
-        border-radius: 3px;
-        color: #999;
-        font-size: 0.8em;
-        width: 300px;
-        height: 400px;
-        padding: 20px;
-        margin-bottom: 40px;
-    }
-    input, textarea{
-        border: 0;
-        outline: none;
-    
-        width: 280px;
-    }
-    
-    .field{
-        border: solid 1px #ccc;
-        padding: 10px;
-    
-        
-    }
-    .center-content{
-        text-align: center;
-        padding-top: 100px;
-     
-    }
-
- @media (min-width:600px) and (max-width:1024px){
-
-  .fondonav .menu-bar{
-    display: block;
-    grid-column: 8/9;
-    font-size: 30px;
-    cursor: pointer;
-      }
-
-      .fondonav .navhome .listasdesordenadas{
-        display: none;
-    }
-
+@media screen and (max-width: 600px){
     footer .pie__copy{
         display: none;
     }
 
+}
 
-    /*media queries de sobre nosotros*/
+/*media queries de sobre nosotros*/
+
+ @media (min-width:601px) and (max-width:1024px){
     .main_nosotros{
 
         display: grid;
@@ -472,16 +377,6 @@ font-family: 'Raleway', sans-serif;
                             
     }
 }
-
-
-
-
-
-
-
-    
-
-    
 
 
 
