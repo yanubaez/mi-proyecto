@@ -26,6 +26,14 @@
     }
     
 }
+
+.text-dark{
+    animation-name: backInDown;
+    animation-duration: 3s;
+}
+.navbar-nav a:hover{
+    color: #fff;!important
+}
 footer{
     display: grid;
     background-color: #39AEA9; 
