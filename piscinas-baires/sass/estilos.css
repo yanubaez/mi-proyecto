@@ -1,0 +1,183 @@
+.fondonav {
+  background-image: -webkit-gradient(linear, right top, left top, from(#60bbf7), to(#00434e));
+  background-image: linear-gradient(to left, #60bbf7, #00434e);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fondonav .img-redondo {
+  border-radius: 50%;
+  width: 70%;
+  -webkit-animation-name: rotar_logo;
+          animation-name: rotar_logo;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+@-webkit-keyframes rotar_logo {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360);
+            transform: rotateY(360);
+  }
+}
+
+@keyframes rotar_logo {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360);
+            transform: rotateY(360);
+  }
+}
+
+.fondonav .listasdesordenadas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*grid-column: 7 / 8;*/
+  /*NO ME DEJA MOVER CON GRID*/
+  font-size: 20px;
+  grid-column-gap: 15px;
+  text-align: center;
+  /*por eso lo hago con margin*/
+  margin-left: 130%;
+  list-style-type: none;
+}
+
+.fondonav a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.fondonav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.fondonav .menu-bar {
+  display: none;
+}
+
+.caption-center {
+  top: 40%;
+}
+
+.text-dark {
+  -webkit-animation-name: backInDown;
+          animation-name: backInDown;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  background-color: #39AEA9;
+      grid-template-areas: "seguinos redes contactate copyright";
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+footer .instagram {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: seguinos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  -webkit-animation-name: flash;
+          animation-name: flash;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+footer .instagram p {
+  color: white;
+}
+
+footer .iconos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: redes;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .wp {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: contactate;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  -webkit-animation-name: flash;
+          animation-name: flash;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+footer .wp p {
+  color: white;
+}
+
+footer .pie__copy {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: copyright;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sacar-subrayado {
+  text-decoration: none;
+}
+/*# sourceMappingURL=estilos.css.map */
