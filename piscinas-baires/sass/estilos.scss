@@ -1,5 +1,10 @@
 @import "variables"; //hice un import para poner variables
 
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
 .fondonav{
     background-image: linear-gradient(to left, rgb(96, 187, 247), rgb(0, 67, 78));
   
@@ -37,10 +42,11 @@
         text-align: center;
         margin-left: 130%;
         list-style-type: none;
+
     }
     a {
-        text-decoration: none;
         color: $color-texto;
+        text-decoration: none;
         cursor: pointer;
         &:hover{ color: #fff; //use el selector & dentro del nesting
             text-decoration: underline;
@@ -108,4 +114,195 @@ footer{
         text-decoration: none;
     }
 
+/*empieza la pagina de sobre nosotros*/
 
+.FondoGris{
+    background-image: url(../imagenes/backgorund.jpg);
+}
+video{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    padding-bottom: 30px;
+    
+}
+.main_nosotros{
+
+    display: grid;
+    grid-template-areas:"quienessomos1"
+                        "quienessomos2"
+                        "video";
+                        
+}
+.div_nosotros1{
+    grid-area: quienessomos1;
+
+}
+.div_nosotros2{
+    grid-area: quienessomos2;
+
+}
+/*Agregando un map*/
+$titulos:(
+  titulos: 40px,
+);
+
+$titulos: map-get($titulos, titulos );
+
+.Titulos{
+    font-family: fantasy;
+    font-weight: 500;
+    padding: 30px;
+    font-size: $titulos;
+    text-align: center;
+    animation-name: fadeInLeft;
+    animation-duration: 3s;
+}
+.lorem{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 5%;
+    color: rgb(48, 44, 44);
+    font-size: 20px;
+    
+}
+/*empieza la pagina de servicios*/
+
+.main_servicios{
+    display: grid;
+    justify-items: center;
+    grid-template-areas:"titulo titulo"
+                        "foto1 foto2"
+                        "foto3 foto4";
+}
+.Tituloservicios{
+    grid-area: titulo;
+    
+
+}
+.Tituloservicioh1{
+    text-align: center;
+    font-family: fantasy;
+    padding-top: 5%;
+    animation-name: hinge;
+    animation-duration: 5s;
+
+    
+}
+
+.ImagenServicio{
+    width: 80%;
+}
+   
+
+.foto1{
+    grid-area: foto1;
+    padding: 10%;
+    font-family: fantasy;
+    cursor: pointer;
+}
+.foto2{
+    grid-area: foto2;
+    padding: 10%;
+    font-family: fantasy;
+    
+}
+.foto3{
+    grid-area: foto3;
+    font-family: fantasy;
+    
+}
+.foto4{
+    grid-area: foto4;
+    padding-bottom: 20%;
+    font-family: fantasy;
+    
+}
+
+.boton{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: black;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 10%;
+    transition: all 3s;
+}
+.boton:hover{
+    transform: translate(-10px);
+    color: black;
+}
+
+
+
+.boton_texto{
+    color: white;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*empieza la pagina de galeria*/
+.main_galeria{
+    display: grid;
+    grid-template-areas:"titulo "
+                        "Contenedorgaleria1"
+                        "ContenedorGaleria2"
+                        "ContenedorGaleria3"
+                        ;
+}
+.TituloGaleria{
+    grid-area: titulo;
+    text-align: center;
+    font-family: fantasy;
+    padding: 20px;
+}
+/*Agregando mixin*/
+@mixin galeria {    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkolivegreen;
+
+}
+.ContenedorGaleria1{
+    grid-area: Contenedorgaleria1;
+    @include galeria;
+
+    }
+    .ContenedorGaleria2{
+        grid-area: ContenedorGaleria2;
+        @include galeria;
+
+    
+    }
+    .ContenedorGaleria3{
+        grid-area: ContenedorGaleria3;
+        @include galeria;
+    }
+     
+    
+
+/*Agregando @extend*/
+.img2{
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.img1 {
+    @extend .img2
+    
+}
+.img3{
+    @extend .img2
+}
+.img4{
+    @extend .img2
+    
+}
+.img9{
+    @extend .img2
+}
+
+.img10{
+    @extend .img2
+}
