@@ -260,6 +260,7 @@ video {
 
 .ImagenServicio {
   width: 80%;
+  height: 180px;
 }
 
 .foto1 {
@@ -268,7 +269,19 @@ video {
   grid-area: foto1;
   padding: 10%;
   font-family: fantasy;
-  cursor: pointer;
+  cursor: default;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 10px black;
+          box-shadow: 0px 1px 10px black;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  margin-top: 10%;
+}
+
+.foto1:hover {
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
 }
 
 .foto2 {
@@ -277,21 +290,61 @@ video {
   grid-area: foto2;
   padding: 10%;
   font-family: fantasy;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 10px black;
+          box-shadow: 0px 1px 10px black;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  margin-top: 10%;
+}
+
+.foto2:hover {
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
 }
 
 .foto3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: foto3;
+  padding: 10%;
   font-family: fantasy;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 10px black;
+          box-shadow: 0px 1px 10px black;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  margin: 15%;
+}
+
+.foto3:hover {
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
 }
 
 .foto4 {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: foto4;
-  padding-bottom: 20%;
+  padding: 10%;
   font-family: fantasy;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 10px black;
+          box-shadow: 0px 1px 10px black;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  margin: 15%;
+}
+
+.foto4:hover {
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
 }
 
 .boton {
@@ -386,5 +439,34 @@ video {
 .img2, .img1, .img3, .img4, .img9, .img10 {
   width: 30%;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1240px) {
+  .fondonav .menu-bar {
+    display: block;
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 1;
+    grid-column: 8/9;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .fondonav .navhome .listasdesordenadas {
+    display: none;
+  }
+  footer .pie__copy {
+    display: none;
+  }
+  /*media queries de sobre nosotros*/
+  .main_nosotros {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "quienessomos1" "quienessomos2" "video " "video";
+  }
+  /*mediaqueries de servicios*/
+  .main_servicios {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "titulo" "foto1" "foto2" "foto3" "foto4";
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
