@@ -20,7 +20,7 @@
   <link name="description" content="Contactate para mas informacion de mantenimientos de piscinas">
   <link name="keywords" content="MANTENIMIENTO, LIMPIEZA, CLORO, PISCINA, POOL, JARDIN, PILETA, BUENOS AIRES, CABA, VERANO, CALOR, VENTA PRODUCTOS, SERVICIOS, CONTACTATE, CONTACTO">
 </head>
-<body>
+<body class="bodyContacto">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(235, 235, 235)">
           <div class="container-fluid">
@@ -54,46 +54,38 @@
     </header>
     
 
-    <div class="container">
-        <form id="backForm" action="procesar.php" method="post">
-            <fieldset>
-                <div>
-                    <legend>Formulario de Contacto</legend>
-                <div class="form-group">
-                <label for="nombre">Nombre: </label>
-                <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="form-control">
-                </div>
-        
-                <div class="form-group">
-                <label for="apellido">Apellido: </label>
-                <input type="text" name="apellido" placeholder="Ingresa tu apellido" class="form-control">
-                </div>
-    
-                <div class="form-group">
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" required class="form-control">
-                </div>
-        
-                <div class="form-group">
-                    <label for="telefono">Telefono: </label>
-                    <input type="tel" name="telefono" class="form-control">
-                </div>
-                <h4>Dejame tu comentario</h4>
-    
-                <textarea class="form-control" name="comentario" id="" cols="30" rows="10"></textarea>
-    
-                  <!--Botones-->
-                <div>
-                <input class="btn btn-outline-primary my-2" type="submit" value="Enviar">
-                </div>
-                <div>
-                <input class="btn btn-outline-danger my-2" type="reset" value="Borrar Formulario">
-                </div>
-
-            </fieldset>
-
-      </form>
-    </div>
+    <main>
+        <form action="">
+            <div class="container-fluid">
+                <div class="contenedorForm">
+                    <div class="row row-cols-1 d-flex jus justify-content-center">
+                        <div class="col-12 col-md-10">
+                            <h2 class="mb-5">Contactanos</h2>
+                            <div class="mb-5">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="nombre" aria-label="apellido">
+                            </div>
+                            <div class="mb-5">
+                                <label for="apellido" class="">Apellido</label>
+                                <input type="text" class="form-control" placeholder="apellido" aria-label="nombre">
+                            </div>
+                            <div class="mb-5">
+                                <label for="email" class="">Email</label>
+                                <input type="email" class="form-control"  placeholder="email">
+                            </div>
+                            <div class="mb-5">
+                                <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                            <div class="mb-5">
+                                <input type="submit" class="btn btn-dark">
+                            </div>
+                        </div> 
+                    </div>
+                </div>  
+            </div>
+        </form>  
+    </main>
     
     <footer>
       <div class="instagram">
